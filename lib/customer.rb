@@ -16,9 +16,8 @@ class Customer
 		@@customers.find {|customer| customer.name == name}
 	end
 
-	def purchase(product)
-		Transaction.new(self, product)
-		puts "#{self.name} purchased 1 '#{product.title}'"
+	def purchase(product, amount=1)
+		Transaction.new(self, product, amount)
 	end
 
 	private

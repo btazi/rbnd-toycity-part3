@@ -1,0 +1,9 @@
+How long did you spend working on this project?
+I spent an hour on this
+What was the most rewarding challenge you conquered?
+I'm already a rails developer, I just want to review my basics in ruby
+What two additional features did you build? Why?
+- Feature 1: choose the amount of products you want to purchase (1 by default) customer.purchase(nanoblock, 3)
+- Feature 2: Find transactions by products with the method find_by_product
+Where do you still have room to grow?
+As a rails developper I never really knew how errors worked, I'd like to learn more about that
