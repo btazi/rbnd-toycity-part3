@@ -16,6 +16,11 @@ class Customer
 		@@customers.find {|customer| customer.name == name}
 	end
 
+	def purchase(product)
+		Transaction.new(self, product)
+		puts "#{self.name} purchased 1 '#{product.title}'"
+	end
+
 	private
 	def add_to_customers(options)
 		if @@customers.any?{|customer| customer.name == options[:name]}
