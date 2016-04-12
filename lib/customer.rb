@@ -5,7 +5,7 @@ class Customer
 
 	def initialize(options={})
 		@name = options[:name]
-		add_to_customers(options)
+		add_to_customers
 	end
 
 	def self.all
@@ -21,9 +21,9 @@ class Customer
 	end
 
 	private
-	def add_to_customers(options)
-		if @@customers.any?{|customer| customer.name == options[:name]}
-			raise DuplicateProductError, "'#{options[:name]}' already exists."
+	def add_to_customers
+		if @@customers.any?{|customer| customer.name == @name}
+			raise DuplicateCustomerError, "'#{@name}' already exists."
 		else
 			@@customers << self
 		end

@@ -7,7 +7,7 @@ class Product
 		@title = options[:title]
 		@price = options[:price]
 		@stock = options[:stock]
-		add_to_products(options)
+		add_to_products
 	end
 
 	def self.all
@@ -28,9 +28,9 @@ class Product
 
 	private
 
-	def add_to_products(options)
-		if @@products.any?{|product| product.title == options[:title]}
-			raise DuplicateProductError, "'#{options[:title]}' already exists."
+	def add_to_products
+		if @@products.any?{|product| product.title == @title}
+			raise DuplicateProductError, "'#{@title}' already exists."
 		else
 			@@products << self
 		end
